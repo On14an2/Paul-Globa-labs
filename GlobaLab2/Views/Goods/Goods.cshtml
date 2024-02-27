@@ -1,0 +1,59 @@
+﻿@using GlobaLab2.ViewModels;
+
+
+
+@model IndexViewModel
+
+@{
+	ViewBag.Title = "goods";
+	Layout = "_Layout";
+}
+
+
+<!--одна из таблиц для вывода бдшки-->
+<div style="width: 100%">
+	<table style="width: 100%;">
+		<tr>
+			<th style="color: #ff3a26">
+				action
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Seller
+			</th>
+			<th style="width: 12.5%">
+				Rating
+			</th>
+			<th style="width: 12.5%">
+				Price
+			</th>
+		</tr>
+		<!--заполнение таблицы с модели-->
+		@* <td>
+			<!--        <%= Html.ActionLink("Edit", "Edit", new { id=item.Id }) %> |-->
+			аа
+			аа
+			<!--        <%= Html.ActionLink("Details", "Details", new { id=item.Id })%>-->
+		</td> *@
+		
+		@foreach (var item in Model.Goods)
+		{
+			<tr>
+				<td>
+					@item.Name
+				</td>
+				<td>
+					@item.IdSellers
+				</td>
+				<td>
+					@item.Rating
+				</td>
+				<td>
+					@item.Price
+				</td>
+			</tr>
+		}
+	</table>
+</div>
